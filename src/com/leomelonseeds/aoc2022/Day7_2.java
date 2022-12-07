@@ -31,6 +31,7 @@ public class Day7_2 {
                     }
                 }
             }
+            
             if (isList) {
                 if (a[0].equals("dir")) {
                     Folder f = new Folder(a[1], currentF);
@@ -39,7 +40,6 @@ public class Day7_2 {
                 } else {
                     currentF.addContent(new File(a[1], Integer.parseInt(a[0])));
                 }
-                continue;
             }
         }
         
