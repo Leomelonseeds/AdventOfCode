@@ -11,7 +11,6 @@ public class Day11_2 {
     public static void main(String[] args) throws NumberFormatException {
         List<Monkey> monkeys = new ArrayList<>();
         List<String> input = Utils.getInput();
-        int test = 23 * 19 * 13 * 17;
         for (int i = 0; i <= 7; i++) {
             int curIndex = i * 7;
             List<String> currentStore = new ArrayList<>();
