@@ -27,7 +27,7 @@ public class Day11_2 {
                 final int size = worries.size();
                 for (int j = 0; j < size; j++) {
                     long worry = worries.remove(0);
-                    long newWorry = m.performOperation(worry) % test;
+                    long newWorry = m.performOperation(worry) % 9699690;
                     int thrownID;
                     if (newWorry % m.getDivisible() == 0) {
                         thrownID = m.getTrue();
@@ -42,19 +42,12 @@ public class Day11_2 {
                     }
                 }
             }
-            if (i == 19) {
-                for (Monkey m : monkeys) {
-                    Utils.print(m.getInspectionAmount() + " ");
-                }
-                Utils.println();
-            }
         }
         
         List<Long> top = new ArrayList<>();
         for (Monkey m : monkeys) { 
             top.add(m.getInspectionAmount());
         }
-        Utils.println(top);
         
         Collections.sort(top);
         Collections.reverse(top);
