@@ -1,4 +1,4 @@
-package com.leomelonseeds.aoc2022.day7;
+package com.leomelonseeds.aoc.y2022.day7;
 
 public class File extends Composite {
     

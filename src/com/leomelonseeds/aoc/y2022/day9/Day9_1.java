@@ -1,9 +1,11 @@
-package com.leomelonseeds.aoc2022;
+package com.leomelonseeds.aoc.y2022.day9;
 
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+
+import com.leomelonseeds.aoc.Utils;
 
 public class Day9_1 {
 

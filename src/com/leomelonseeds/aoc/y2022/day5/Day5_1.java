@@ -1,10 +1,12 @@
-package com.leomelonseeds.aoc2022;
+package com.leomelonseeds.aoc.y2022.day5;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import com.leomelonseeds.aoc.Utils;
 
 public class Day5_1 {
 

@@ -1,4 +1,4 @@
-package com.leomelonseeds.aoc2022;
+package com.leomelonseeds.aoc;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -8,11 +8,15 @@ import java.util.Scanner;
 
 public class Utils {
     
-    // Load file
     public static List<String> getInput() {
+        return getInput("input");
+    }
+    
+    // Load file
+    public static List<String> getInput(String type) {
         ArrayList<String> text = new ArrayList<>();
         try {
-            File input = new File("input.txt");
+            File input = new File(type + ".txt");
             Scanner scanner;
             scanner = new Scanner(input);
             while(scanner.hasNextLine()) {

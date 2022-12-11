@@ -1,10 +1,9 @@
-package com.leomelonseeds.aoc2022;
+package com.leomelonseeds.aoc.y2022.day7;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import com.leomelonseeds.aoc2022.day7.File;
-import com.leomelonseeds.aoc2022.day7.Folder;
+import com.leomelonseeds.aoc.Utils;
 
 public class Day7_1 {
 

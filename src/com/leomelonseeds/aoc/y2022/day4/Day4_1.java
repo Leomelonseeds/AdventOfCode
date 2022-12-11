@@ -1,8 +1,10 @@
-package com.leomelonseeds.aoc2022;
+package com.leomelonseeds.aoc.y2022.day4;
 
-public class Day4_2 {
+import com.leomelonseeds.aoc.Utils;
 
-    public static void main(String[] args) {
+public class Day4_1 {
+
+    public static void main(String[] args) throws NumberFormatException {
         int count = 0;
         for (String s : Utils.getInput()) {
             String pair[] = s.split(",");
@@ -12,11 +14,10 @@ public class Day4_2 {
             int a2 = Integer.parseInt(nums1[1]);
             int b1 = Integer.parseInt(nums2[0]);
             int b2 = Integer.parseInt(nums2[1]);
-            if ((a1 >= b1 && a1 <= b2) || (b1 >= a1 && b1 <= a2)) {
+            if ((a1 >= b1 && a2 <= b2) || (b1 >= a1 && b2 <= a2)) {
                 count++;
             }
         }
         Utils.println(count);
     }
-
 }
