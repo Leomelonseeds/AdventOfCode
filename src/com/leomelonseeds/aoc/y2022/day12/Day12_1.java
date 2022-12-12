@@ -17,7 +17,7 @@ public class Day12_1 {
     private static int sizex;
     private static int sizey;
 
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) {
         input = Utils.getInput();
         sizes = new HashMap<>();
         // Replace "S" with "a" and "E" with "{" for reasons
@@ -33,7 +33,7 @@ public class Day12_1 {
         Utils.println(max);
     }
 
-    public static void travel(int[] pos, char last, Set<List<Integer>> travelled) throws InterruptedException {
+    public static void travel(int[] pos, char last, Set<List<Integer>> travelled) {
         if (pos[0] < 0 || pos[0] >= sizex || pos[1] < 0 || pos[1] >= sizey) {
             return;
         }
