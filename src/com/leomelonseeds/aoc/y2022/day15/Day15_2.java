@@ -61,6 +61,7 @@ public class Day15_2 {
             
             if (!sensorFound) {
                 Utils.println((long) x * 4000000 + y);
+                break;
             }
         }
     }
