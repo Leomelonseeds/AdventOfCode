@@ -58,7 +58,7 @@ public class Day16_1 {
         minutes--;
         for (List<Valve> prev : new HashMap<>(queue).keySet()) {
             Valve current = prev.get(prev.size() - 1);
-            if (!current.isOpened() && current.getRate() > 0 && minutes > 0) {
+            if (!current.isOpened() && current.getRate() > 0) {
                 current.open();
                 queue.put(prev, queue.get(prev) + minutes * current.getRate());
                 continue;
