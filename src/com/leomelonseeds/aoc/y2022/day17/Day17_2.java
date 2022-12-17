@@ -13,6 +13,7 @@ public class Day17_2 {
         char[] jets = Utils.getInput().get(0).toCharArray();
         // SOLUTION: Utils.println(581395347L * 2704 + 2890 + (4980 - 2891));
         Set<List<Integer>> felled = new HashSet<>();
+        Set<List<Integer>> rockJetCombos = new HashSet<>();
         // Initialize felled with floor
         for (int i = -4; i <= 4; i++) {
             felled.add(Arrays.asList(new Integer[] {i, 0}));
@@ -22,6 +23,16 @@ public class Day17_2 {
         int prevDiff = 0;
         for (long i = 1; i <= 1000000000000L; i++) {
             rockNum = rockNum > 4 ? 0 : rockNum;
+            
+            // Detect rock-jet combos that already exist to find repetition
+            // After finding repetition, find first rock/jet num to repeat (0, 600)
+            // And find all other locations where this combo repeats. This turns out to
+            // be every 1720 iterations, with the highest num increasing by 2704
+            // each time this combo repeats.
+            if (!rockJetCombos.add(Arrays.asList(new Integer[] {rockNum, jetNum}))) {
+                Utils.println("Repetition found at " + i + " with " + rockNum + ", " + jetNum);
+            }
+            
             int spawny = getHighestPos(felled) + 4;
             Set<List<Integer>> rock = new HashSet<>();
             switch (rockNum) {
