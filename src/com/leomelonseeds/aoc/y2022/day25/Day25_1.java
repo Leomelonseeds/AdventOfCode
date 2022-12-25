@@ -34,10 +34,8 @@ public class Day25_1 {
         }
         
         Utils.println(toSnafu(sum));
-        Utils.println(toSnafu(1));
     }
     
-    // Prints snafe numbers backwards btw
     private static String toSnafu(long i) {
         // Base 5 conversion
         List<Long> mods = new ArrayList<>();
