@@ -27,6 +27,16 @@ public class Utils {
         return text;
     }
     
+    public static boolean isDigit(char c) {
+        try {
+            Integer.parseInt(String.valueOf(c));
+        } catch (NumberFormatException e) {
+            return false;
+        }
+        
+        return true;
+    }
+    
     //Extra helper functions
     public static void print(Object s) {
         System.out.print(s);
