@@ -29,7 +29,17 @@ public class Utils {
     
     public static boolean isDigit(char c) {
         try {
-            Integer.parseInt(String.valueOf(c));
+            Long.parseLong(String.valueOf(c));
+        } catch (NumberFormatException e) {
+            return false;
+        }
+        
+        return true;
+    }
+    
+    public static boolean isDigit(String s) {
+        try {
+            Long.parseLong(String.valueOf(s));
         } catch (NumberFormatException e) {
             return false;
         }
