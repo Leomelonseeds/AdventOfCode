@@ -47,6 +47,19 @@ public class Utils {
         return true;
     }
     
+    public static List<Integer> strToList(String s){
+        String[] args = s.split(" ");
+        List<Integer> r = new ArrayList<>();
+        for (String a : args) {
+            r.add(Integer.parseInt(a));
+        }
+        return r;
+    }
+    
+    public static String trimStr(String s) {
+        return s.trim().replaceAll(" +", " ");
+    }
+    
     //Extra helper functions
     public static void print(Object s) {
         System.out.print(s);
