@@ -60,6 +60,22 @@ public class Utils {
         return s.trim().replaceAll(" +", " ");
     }
     
+    public List<String> toList(String... strs) {
+        List<String> r = new ArrayList<>();
+        for (String s : strs) {
+            r.add(s);
+        }
+        return r;
+    }
+    
+    public List<Integer> toList(int... is) {
+        List<Integer> r = new ArrayList<>();
+        for (int i : is) {
+            r.add(i);
+        }
+        return r;
+    }
+    
     //Extra helper functions
     public static void print(Object s) {
         System.out.print(s);
