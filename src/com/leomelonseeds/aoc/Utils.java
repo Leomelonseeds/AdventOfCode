@@ -60,7 +60,7 @@ public class Utils {
         return s.trim().replaceAll(" +", " ");
     }
     
-    public List<String> toList(String... strs) {
+    public static List<String> toList(String... strs) {
         List<String> r = new ArrayList<>();
         for (String s : strs) {
             r.add(s);
@@ -68,7 +68,7 @@ public class Utils {
         return r;
     }
     
-    public List<Integer> toList(int... is) {
+    public static List<Integer> toList(int... is) {
         List<Integer> r = new ArrayList<>();
         for (int i : is) {
             r.add(i);
@@ -81,6 +81,17 @@ public class Utils {
         for (int i = 0; i < l.size(); i++) {
             if (l.get(i).equals(on)) {
                 r = r | (int) Math.pow(2, (l.size() - i - 1));
+            }
+        }
+        
+        return r;
+    }
+    
+    public static <T> int toBinary(T[] l, T on) {
+        int r = 0;
+        for (int i = 0; i < l.length; i++) {
+            if (l[i].equals(on)) {
+                r = r | (int) Math.pow(2, (l.length - i - 1));
             }
         }
         
