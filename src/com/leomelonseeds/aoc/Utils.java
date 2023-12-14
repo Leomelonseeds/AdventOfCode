@@ -98,6 +98,33 @@ public class Utils {
         return r;
     }
     
+    public static <T> void printGrid(List<List<T>> l) {
+        for (List<T> lt : l) {
+            Utils.println(lt);
+        }
+    }
+    
+    /**
+     * Return a column-by-column list from the given list
+     * 
+     * @param <T>
+     * @param l Each list must have equal length
+     * @return
+     */
+    public static <T> List<List<T>> verticalList(List<List<T>> l){
+        List<List<T>> r = new ArrayList<>();
+        for (int j = 0; j < l.get(0).size(); j++) {
+            List<T> cr = new ArrayList<>();
+            for (int k = 0; k < l.size(); k++) {
+                cr.add(l.get(k).get(j));
+            }
+            
+            r.add(cr);
+        }
+        
+        return r;
+    }
+    
     //Extra helper functions
     public static void print(Object s) {
         System.out.print(s);
