@@ -12,6 +12,11 @@ public class Coord {
         this.y = y;
     }
     
+    public Coord(Coord c) {
+        this.x = c.x();
+        this.y = c.y();
+    }
+    
     public void x(int x) {
         this.x = x;
     }
@@ -26,6 +31,11 @@ public class Coord {
     
     public int y() {
         return y;
+    }
+    
+    @Override
+    public String toString() {
+        return "(" + x + ", " + y + ")";
     }
 
     @Override
