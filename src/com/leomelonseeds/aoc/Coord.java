@@ -33,6 +33,18 @@ public class Coord {
         return y;
     }
     
+    public Coord multiply(int m) {
+        return new Coord(x * m, y * m);
+    }
+    
+    public Coord add(Coord c) {
+        return new Coord(x + c.x(), y + c.y());
+    }
+    
+    public Coord subtract(Coord c) {
+        return new Coord(x - c.x(), y - c.y());
+    }
+    
     @Override
     public String toString() {
         return "(" + x + ", " + y + ")";
